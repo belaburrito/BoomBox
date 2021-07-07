@@ -17,12 +17,15 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- take this out-->
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/variables.css" rel="stylesheet">
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -112,6 +115,38 @@
             </div>
         </div>
         <!-- Hero End -->
+
+        <!-- Hero Gallery -->
+        
+        <div class="carousel-hero js-flickity" data-flickity-options='{"cellAlign": "left", "contain": true, "pageDots": true, "prevNextButtons": false, "accessibility": true}'>
+            <div class="carousel-cell">
+                <div class="container-fluid h-100 border-test">
+                    <div class="row h-100 border-test">
+                        <div class="col-5 align-self-center border-test">
+                            <div class="carousel-hero-content">
+                                <h2>Over 2,000 games</h2>
+                                <h1>Best Games in BoomBox</h1>
+                                <div class="explore-play-btn">
+                                    <a class="btn" href="">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 d-none d-md-block">
+                            <div class="hero-image border-test align-self-end">
+                                <img src="img/hero.png" alt="Hero Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
+            <div class="carousel-cell">...</div>
+        </div>
+
+        <!-- Hero Gallery End -->
 
         <!-- QED Services Start -->
         <div class="portfolio" id="services-dark">
@@ -783,6 +818,8 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
