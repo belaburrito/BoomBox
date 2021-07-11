@@ -1,0 +1,4 @@
+Colors
+
+Red :FF0000
+Blue :00AEEF
