@@ -2,7 +2,7 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #797979;
+    color: white;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
@@ -11,6 +11,10 @@ body {
     padding: 0;
     margin: 0;    
     overflow-x: hidden;
+}
+
+.border-test{
+    border: solid 2px red;
 }
 
 h1,
@@ -33,6 +37,33 @@ a:focus {
     color: #EF233C;
     outline: none;
     text-decoration: none;
+}
+
+.redat{
+    color: var(--red-primary);
+}
+
+.blueat{
+    color: var(--blue-primary);
+}
+
+.gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: var(--blue-primary);
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, var(--red-primary), var(--blue-primary));
+    
+    /* Set the background size and repeat properties. */
+    background-size: 20%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 .btn:focus,
@@ -227,7 +258,7 @@ a:focus {
     }
     
     .navbar.nav-sticky {
-        padding: 10px 0px 0px 0px;
+        padding: .5rem 1rem;
     }
     
     .navbar .navbar-brand {
@@ -345,7 +376,6 @@ a:focus {
 .hero-boombox{
     width: 100%;
     padding-top: 60px;
-    position: relative;
     margin-bottom: -30px;
 }
 
@@ -357,8 +387,7 @@ a:focus {
     width: 100%;
     height: 80%;
     position: absolute;
-    z-index: 8;
-    
+    z-index: 8;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,16 +395,6 @@ a:focus {
 
 .hero-boombox-logo img{
     width: 50%;
-}
-
-.carousel-boombox{
-    position: relative;
-    z-index: 0;
-}
-
-.hero-cell{
-    position: relative;
-    z-index: 0;
 }
 
 .hero-cell img{
@@ -622,19 +641,29 @@ a:focus {
 /*************************************/
 /********** Our Games CSS ***********/
 /************************************/
+
+.section-header{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
 .container-fluid{
     padding: 0;
 }
 
+.our-games{
+    margin-bottom: -40px;
+}
+
 .our-games-header{
     width: 100%;
-    position: relative;
-    z-index: 10;
 }
 
 .our-games-header img{
     position: relative;
-    z-index: 10;
+    z-index: 7;
     width: 100%;
 }
 
@@ -654,6 +683,8 @@ a:focus {
 
 .our-games-footer{
     width: 100%;
+    background: transparent;    
+    margin-top: -20px;
 }
 
 .our-games-footer img{
@@ -766,7 +797,6 @@ a:focus {
 }
 
 .game-buttons .col-lg-6{
-    height: 400px;
     padding: 0;
     overflow: hidden;
 }
@@ -775,11 +805,247 @@ a:focus {
     padding: 0;
 }
 
+/*******************************/
+/******* Newsletter Header ********/
+/*******************************/
 
+.newsletter{
+    position: relative;
+    background: transparent;
+    margin-top: -30px;
+    background-image: url('../assets/home/newsletter/brush-red.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 30%;
+}
+
+.newsletter .container-fluid{
+    background: black;
+}
+
+.newsletter-tear{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.newsletter-tear img{
+    width: 100%;
+    z-index: 7;
+    position: relative;
+}
+
+.newsletter-content{        
+    position: relative;
+    margin: 10px 50px 0px;
+    padding-bottom: 0;
+
+}
+
+.newsletter hr{
+    height: .01em;
+    width: 90%;
+    display: block;
+    margin: auto;
+    background: linear-gradient(90deg, var(--red-primary), var(--blue-primary));
+    margin-bottom: 30px;
+}
+
+.newsletter-content .form-group{
+    font-size: 0.9em;
+    color: var(--blue-primary);
+}
+
+.newsletter-content .form-group a{
+    font-size: 0.9em;
+    color: darkgray;
+}
+
+.newsletter-content .form-control{
+    width: 50%;
+}
+
+.newsletter-content .form-group .input-label{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.newsletter-content .form-check{
+    display: flex;
+}
+
+.newsletter-content .form-submission{
+    margin-top: 20px;
+}
+
+.newsletter-btn{
+    background-image: linear-gradient(90deg, var(--red-primary), var(--blue-primary));
+    border-radius: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    width: 100px;
+    border: none;
+    color: white;
+    box-shadow: none;
+}
+
+.newsletter-header{
+    width: 30%;
+    padding-left: 50px;
+}
+
+.newsletter-header img{
+    width: 100%;
+}
+
+.newsletter-content img{
+    width: 100%;
+}
+
+.newsletter-contact .row{
+    display: inline-flex;
+    width: 100%;
+}
+
+.newsletter-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+    margin: 0px 15px 15px;
+}
+
+.newsletter-address h1{
+    color: white;
+    font-size: 1em;
+}
+
+.newsletter-address p, .newsletter-email p{
+    margin: 0;
+}
+
+.newsletter-icons{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.newsletter-icons .newsletter-social{
+    color: white;
+    font-size: 1.5em;
+    margin: 15px;
+    
+}
+
+.newsletter-content .form-submission{
+    width: 50%;
+}
+
+@media (max-width: 767.98px) {
+
+    .newsletter-header{
+        width: 60%;
+    }
+
+    .newsletter-content .form-control {
+        width: 90%;
+    }
+
+    .newsletter-content .form-submission{
+        width: 90%;
+    }
+
+    .newsletter-content img{
+        display: none;
+    }
+    
+    .newsletter{
+        background-size: 50%;
+    }
+}
+
+
+/*******************************/
+/******* Footer Header ********/
+/*******************************/
+
+.footer .links{
+    background: linear-gradient(90deg, var(--red-primary), var(--blue-primary));
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .links a{    
+    color: white;
+    padding-right: 30px;
+}
+
+.footer .policy a{
+    color: black;
+}
+
+.footer .copyright{
+    background: black;
+    padding: 20px;
+}
+
+.footer .copyright p{
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/*******************************/
+/******* Publisher Header ********/
+/*******************************/
+
+.filler-hero{
+    width: 100%;
+    margin-bottom: -40px;
+    overflow-y: hidden;
+}
+
+.filler-hero img{
+    width: 100%;
+}
+
+.publisher-header-tear{
+    width: 100%;
+    background: transparent;
+    margin-bottom: -5px;
+}
+
+.publisher-tear img{
+    width: 100%;
+    position: relative;
+    z-index: 7;
+}
+
+.publisher .row{
+    background: black;
+}
+
+.publisher .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.publisher-title{
+    align-self: center;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.publisher .col p{
+    width: 60%;
+    align-self: center;
+}
 
 /*******************************/
 /******* Section Header ********/
 /*******************************/
+/*
 .section-header {
     position: relative;
     margin-bottom: 45px;
@@ -798,9 +1064,7 @@ a:focus {
     background: #ffffff;
 }
 
-.border-test{
-    border: solid 2px red;
-}
+
 
 .section-header p::before {
     position: absolute;
@@ -837,7 +1101,7 @@ a:focus {
     }
 }
 
-
+*/
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -1726,69 +1990,90 @@ a:focus {
 /******* Testimonial CSS *******/
 /*******************************/
 
-.testimonial{    
-    background-image: linear-gradient(45deg, var(--blue-six), var(--red-one));
-    min-height: 100vh;
-}
-
-.testimonial img{
-    z-index: 999;
-    position: relative;
-    left: 33%;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-}
-
-.carousel-wrapper{
+.testimonial{
+    margin-top: -40px;
+    padding-top: 50px;
+    background: linear-gradient(-45deg, var(--blue-primary), var(--red-primary));
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding: 50px 0;
-   
 }
 
 .carousel-testimonial{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    width: 50%;    
+    overflow-x: visible;
 }
 
-.test-container{
-    width: 500px;
-    height: 200px;
-    border: solid 2px red;
-    margin: 200px;
+.carousel-testimonial > *{    
+    border-radius: 20px;
 }
 
-.testimonial-cell{    
-    padding: 50px 0;    
-    background: darkgray;
-    z-index: -999;
-   /* touch-action: pan-y;
-    overflow: auto;
-    counter-increment: testimonial-cell;
-    margin-right: 10px;*/
-}  
+.testimonial-cell{
+    margin: auto;
+    background-image: url('../assets/home/testimonial/testimony-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 400px;
+    display: flex !important;
+    flex-direction: column;    
+    justify-content: center;
+    margin-bottom: 10px;
 
-.testimonial-content{
-    padding: 20px;
-    color: white;
+    overflow: visible;
+    position: relative;
+    z-index: 0;
+    font-size: 1.2em;
 }
 
-.testimonial-author{
+
+.testimonial-cell img{
+    position: absolute;
+    z-index: 999;
+    left: -20px;
+    bottom: -20px;
+    width: 150px;
+}
+
+.testimonial-cell p{
+    text-align: left;
+}
+
+.testimonial-cell h1{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.testimonial-cell h2{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: lightgray;
+}
+
+
+.testimonial-cell h1, .testimonial-cell h2{
     text-align: right;
-    padding: 20px;
 }
 
-.slick-prev:before{
+.carousel-testimonial .slick-prev:before{
     font-family: "Font Awesome 5 Free";
     content: "\f30a";
     font-size: 50px;
     font-weight: 900;
     opacity: 1;
+    left: 0px;
 }
 
-.slick-next:before{
+.carousel-testimonial .slick-prev{
+    left: -100px;
+}
+
+.carousel-testimonial .slick-next:before{
     font-family: "Font Awesome 5 Free";
     content: "\f30b";
     font-size: 50px;
@@ -1796,24 +2081,27 @@ a:focus {
     opacity: 1;
 }
 
-.slick-prev{    
-    left: -100px;
-}
-
-.slick-next{
+.carousel-testimonial .slick-next{
     right: -100px;
 }
 
-.slick-next, .slick-prev{
+.carousel-testimonial .slick-next, .slick-prev{
     width: 70px;
     height: 70px;
-    border: solid 2px white;
+    border: solid 1px white;
     border-radius: 50%;
 }
 
-.slick-dots li.slick-active button:before, .slick-dots li button:before {
+.carousel-testimonial .slick-dots li.slick-active button:before, .slick-dots li button:before {
     color: white;
 }
+
+/*
+
+
+
+
+
 
 .testimonial-icon{
     width: 200px;
@@ -1872,7 +2160,7 @@ a:focus {
 
 }
 
-
+*/
 /*flickity css
 Note: Flickity format requires a filler testimonial-cell, d-flex justify-content-between
 
@@ -2218,6 +2506,7 @@ Note: Flickity format requires a filler testimonial-cell, d-flex justify-content
 /*******************************/
 /********* Footer CSS **********/
 /*******************************/
+/*
 .footer {
     position: relative;
     margin-top: 45px;
@@ -2345,3 +2634,4 @@ Note: Flickity format requires a filler testimonial-cell, d-flex justify-content
         padding: 0 5px;
     }
 }
+*/
