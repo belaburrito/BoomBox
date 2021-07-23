@@ -124,24 +124,31 @@
                         </div>
     
                         <div class="col-sm-12 col-md-8">
-                            <div class="form-group">
-                                <img class="community-outreach-title" src="assets/home/community/community.svg">
-                                <p>Lorem ipsum dolor sit amet, conm ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pellentesque erat. Suspendisse gravida, eros sed gravida mattis, diam nisl porta ex, non sodales lacus mauris eu magna.</p>
-                                
-                                <div class="form-group">                                             
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-describedby="emailHelp">                            
-                                </div>
-    
+                            <form class="needsValidation" action="https://formspree.io/f/mrgravld" method="POST" novalidate>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="textAreaSupport" placeholder="Please describe the issue you are experiencing." rows="3"></textarea>
-                                </div>
+                                    <img class="community-outreach-title" src="assets/home/community/community.svg">
+                                    <p>Lorem ipsum dolor sit amet, conm ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pellentesque erat. Suspendisse gravida, eros sed gravida mattis, diam nisl porta ex, non sodales lacus mauris eu magna.</p>
                                     
-                                <div class="form-submission d-flex align-items-center justify-content-between">
-                                    <button type="submit" class="newsletter-btn">Send</button>
+                                    <div class="form-group">                                             
+                                        <input type="email" name="_replyto" placeholder="Email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <div class="invalid-feedback">
+                                            Enter a valid email
+                                        </div>                            
+                                    </div>
+        
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="textAreaSupport" name="message" placeholder="Please describe the issue you are experiencing." rows="3" required></textarea>
+                                        <div class="invalid-feedback">
+                                            Please describe your issue.
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="form-submission d-flex align-items-center justify-content-between">
+                                        <button type="submit" class="newsletter-btn">Send</button>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-    
+                            </form>
                         </div>
                     </div>
                     <hr></hr>
@@ -236,7 +243,18 @@
                 slidesToScroll: 1,
                 adaptiveHeight: true,
                 speed: 500,
-            });		
+            });
+            
+            
+            var form = document.querySelector('.needsValidation');
+            
+            form.addEventListener('submit', function(event) {
+                if(form.checkValidity() === false){                    
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
         </script>
 
         

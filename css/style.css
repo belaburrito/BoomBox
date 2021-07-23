@@ -891,6 +891,7 @@ hr{
 
 .newsletter-content .form-check{
     display: flex;
+    flex-direction: column;
 }
 
 .newsletter-content .form-submission{
@@ -960,6 +961,20 @@ hr{
     width: 50%;
 }
 
+.needs-validation{
+    color: red;
+}
+
+@media (min-width: 992px) {
+    .newsletter-content .form-group p{
+        width: 60%;
+    }
+
+    .newsletter-content .form-group{
+        padding-left: 50px;
+    }
+}
+
 @media (max-width: 767.98px) {
 
     .newsletter-header{
@@ -1022,7 +1037,7 @@ hr{
     width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
-    margin-bottom: -40px;
+    margin-bottom: -50px;
     overflow-y: hidden;
     background-image: url('../assets/home/slider/slider-2.jpg');
     background-repeat: no-repeat;
@@ -1043,6 +1058,10 @@ hr{
     width: 100%;
     background: transparent;
     margin-bottom: -5px;
+}
+
+.publisher-footer-tear{
+    margin-top: -5px;
 }
 
 .publisher .row{
@@ -1328,6 +1347,7 @@ hr{
 .ceo h1{
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 50px;
 }
 
 .ceo h1, .ceo p, .ceo h2{
@@ -1352,6 +1372,10 @@ hr{
     padding: 0px 80px;
 }
 
+#philippe-content{
+    padding-bottom: 50px;
+}
+
 @media(max-width: 979px){
     .who-are-we{
         padding-top: 0;
@@ -1370,7 +1394,7 @@ hr{
 /*******************************/
 
 .social-media{
-    margin-top: -80px;
+    margin-top: -90px;
     min-height: 50vh;
     background: linear-gradient(135deg, var(--red-primary), var(--blue-primary));
 }
@@ -1492,7 +1516,7 @@ hr{
 .community-outreach{
     position: relative;
     background: transparent;
-    margin-top: -30px;
+    margin-top: -60px;
 }
 
 .community-outreach .container-fluid{
