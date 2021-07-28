@@ -17,14 +17,6 @@ body {
     border: solid 2px red;
 }
 
-h1,
-h2, 
-h3, 
-h4,
-h5, 
-h6 {
-    color: #414141;
-}
 
 a {
     color: #313131;
@@ -780,11 +772,11 @@ a:focus {
     padding: 0;
 }
 
-.game-buttons .col-lg-6:hover .game-content, .game-buttons .col-lg-4:hover .game-content{
+.game-buttons .col-lg-6:hover .game-content, .game-buttons .col-lg-3:hover .game-content{
     opacity: 1;
 }
 
-.game-buttons .col-lg-6:hover .game-desc, .game-buttons .col-lg-4:hover .game-desc{    
+.game-buttons .col-lg-6:hover .game-desc, .game-buttons .col-lg-3:hover .game-desc{    
     top: 50%;
     left: 50%;
     opacity: 1;
@@ -807,7 +799,7 @@ a:focus {
     overflow: hidden;
 }
 
-.game-buttons .col-lg-4{
+.game-buttons .col-lg-3{
     padding: 0;
 }
 
@@ -1115,7 +1107,47 @@ hr{
     }
 }
 
+/*******************************/
+/******* Privacy CSS ***********/
+/*******************************/
 
+.privacy{
+    background: white;
+    color: black !important;
+    padding-top: 80px;
+}
+
+.privacy .container{
+    width: 80%;
+}
+
+.privacy-bold{
+    font-weight: bolder;
+}
+
+.privacy h1{
+    font-size: 2.5em;
+}
+
+.privacy h2{
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+.privacy p, .privacy li{
+    font-size: 0.9em;
+}
+
+.privacy ol{
+    padding: revert;
+    list-style-position: inside;
+}
+
+@media(max-width: 979px){
+    .privacy{
+        padding-top: 0;
+    }
+}
 
 
 /*******************************/
